@@ -1,27 +1,19 @@
 📊 FMCG Sales Data Engineering & Analytics Pipeline
-📌 Project Overview
 
+Project Overview
 This project demonstrates an end-to-end data engineering and analytics pipeline using an FMCG retail dataset.
-The goal was to ingest raw transactional sales data, perform scalable transformations, orchestrate workflows, and deliver actionable business insights via an interactive Power BI dashboard.
+The aim was to ingest raw transactional sales data, perform scalable transformations, organize workflows and deliver actionable business insights through an interactive Power BI dashboard.
 
-🧰 Tech Stack
-
+Tech Stack
 SQL – exploratory analysis and aggregations
-
 PySpark (Databricks) – data cleaning and transformation
-
-Apache Airflow – pipeline orchestration
-
+Apache Airflow – pipeline organization
 Power BI – data visualization and KPI reporting
-
 Python – supporting scripts and analysis
 
 📂 Dataset
-
 Source: Kaggle – Grocery Store Sales Dataset
-
 Records: ~1900 transactions
-
 Key fields:
 
 Transaction date
