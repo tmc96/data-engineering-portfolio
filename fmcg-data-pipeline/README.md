@@ -84,7 +84,7 @@ SQL queries used for exploratory analysis and data validation are available here
 
 ---
 
-##  How to Run
+##  **How to Run**
 1. Ingest raw FMCG sales data into **Databricks**
 2. Execute **PySpark notebooks** to perform data cleaning and aggregations
 3. Configure and trigger the **Apache Airflow DAG** for pipeline orchestration
