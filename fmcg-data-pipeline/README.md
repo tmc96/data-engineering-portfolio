@@ -5,6 +5,7 @@ Project Overview
 This project demonstrates an end-to-end data engineering and analytics pipeline using an FMCG retail dataset.
 The aim was to ingest raw transactional sales data, perform scalable transformations, organize workflows and deliver actionable business insights through an interactive Power BI dashboard.
 
+
 Tech Stack
 
 SQL – exploratory analysis and aggregations
@@ -16,6 +17,7 @@ Apache Airflow – pipeline organization
 Power BI – data visualization and KPI reporting
 
 Python – supporting scripts and analysis
+
 
 Dataset
 Source: Kaggle – Grocery Store Sales Dataset
@@ -33,6 +35,7 @@ Product Name
 Quantity
 
 Final sales amount
+
 
 Data Pipeline Architecture
 
@@ -58,6 +61,7 @@ Aggregated outputs consumed in Power BI
 
 KPIs and trends visualized for business insights
 
+
 Power BI Dashboard
 
 Key insights delivered:
@@ -70,6 +74,7 @@ Weekly and daily sales trends
 
 Interactive filtering by date
 
+
 Key KPIs
 
 Total Sales
@@ -80,11 +85,13 @@ Weekly Sales Trend
 
 Top Product Contribution
 
+
 Sample SQL Analysis
 
 SQL queries used for validation and exploratory analysis are available in:
 
 /sql/sales_analysis.sql
+
 
 How to Run 
 
@@ -95,6 +102,7 @@ Run PySpark notebook for transformations
 Configure and trigger Airflow DAG
 
 Connect Power BI to processed tables
+
 
 What This Project Demonstrates
 
@@ -107,6 +115,7 @@ Pipeline organizationn with Airflow
 Business-focused analytics and visualization
 
 Clean, production-style project structure
+
 
 Future Improvements
 
