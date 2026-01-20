@@ -6,29 +6,33 @@ The aim was to ingest raw transactional sales data, perform scalable transformat
 
 Tech Stack
 SQL – exploratory analysis and aggregations
+
 PySpark (Databricks) – data cleaning and transformation
+
 Apache Airflow – pipeline organization
+
 Power BI – data visualization and KPI reporting
+
 Python – supporting scripts and analysis
 
-📂 Dataset
+Dataset
 Source: Kaggle – Grocery Store Sales Dataset
 Records: ~1900 transactions
 Key fields:
 
 Transaction date
 
-Store
+Store Name
 
 Aisle
 
-Product
+Product Name
 
 Quantity
 
 Final sales amount
 
-🔄 Data Pipeline Architecture
+Data Pipeline Architecture
 
 Data Ingestion
 
@@ -36,11 +40,11 @@ Raw CSV ingested into Databricks
 
 Data Transformation (PySpark)
 
-Handling missing values
+Handling missing values, improving quality of data
 
 Aggregating sales by product, aisle, store, and date
 
-Workflow Orchestration (Airflow)
+Workflow organization (Airflow)
 
 DAG scheduled to run daily
 
@@ -52,7 +56,7 @@ Aggregated outputs consumed in Power BI
 
 KPIs and trends visualized for business insights
 
-📈 Power BI Dashboard
+Power BI Dashboard
 
 Key insights delivered:
 
@@ -62,14 +66,9 @@ Top performing stores and aisles
 
 Weekly and daily sales trends
 
-Interactive filtering by date, store, and category
+Interactive filtering by date
 
-📷 Dashboard snapshots:
-
-
-
-
-📊 Key KPIs
+Key KPIs
 
 Total Sales
 
@@ -85,7 +84,7 @@ SQL queries used for validation and exploratory analysis are available in:
 
 /sql/sales_analysis.sql
 
-🚀 How to Run (Optional Section)
+How to Run 
 
 Load dataset into Databricks
 
@@ -95,19 +94,19 @@ Configure and trigger Airflow DAG
 
 Connect Power BI to processed tables
 
-🎯 What This Project Demonstrates
+What This Project Demonstrates
 
 End-to-end data engineering workflow
 
 Scalable data processing using Spark
 
-Pipeline orchestration with Airflow
+Pipeline organizationn with Airflow
 
 Business-focused analytics and visualization
 
 Clean, production-style project structure
 
-📌 Future Improvements
+Future Improvements
 
 Add cloud storage (S3 / ADLS)
 
@@ -122,4 +121,4 @@ Deploy dashboard to Power BI Service
 Tanvi Chinnapa
 Aspiring Data Engineer / Analytics Engineer
 Location: Europe
-Skills: SQL | Python | Spark | Airflow | Power BI | AWS (in progress)
+Skills: SQL | Python | Spark | Airflow | Power BI
