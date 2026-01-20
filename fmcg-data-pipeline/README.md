@@ -33,11 +33,11 @@ This project reflects real-world data engineering practices, including scalable 
 
 ##  Data Pipeline Architecture
 
-### 1 Data Ingestion
+### 1) Data Ingestion
 - Raw CSV sales data ingested into **Databricks**
 - Dataset prepared for distributed processing
 
-### 2 Data Transformation (PySpark)
+### 2) Data Transformation (PySpark)
 - Data cleaning and quality improvement
 - Handling missing and inconsistent values
 - Aggregation of sales metrics by:
@@ -46,12 +46,12 @@ This project reflects real-world data engineering practices, including scalable 
   - Store
   - Date
 
-### 3 Workflow Orchestration (Apache Airflow)
+### 3) Workflow Orchestration (Apache Airflow)
 - End-to-end pipeline organized using an **Airflow DAG**
 - Daily scheduled execution
 - Automated transformation and load steps
 
-### 4 Analytics & Visualization
+### 4) Analytics & Visualization
 - Curated, aggregated tables exposed to **Power BI**
 - KPI-driven dashboards built for business analysis
 
