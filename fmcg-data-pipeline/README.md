@@ -16,7 +16,6 @@ This project reflects real-world data engineering practices, including scalable 
 - **Power BI** – Business intelligence, KPIs, and dashboards  
 - **Python** – Supporting scripts and data analysis  
 
----
 
 ##  Dataset
 **Source:** Kaggle – Grocery Store Sales Dataset  
@@ -79,12 +78,12 @@ This project reflects real-world data engineering practices, including scalable 
 ##  Sample SQL Analysis
 SQL queries used for exploratory analysis and data validation are available here:
 
-```text
+
 /sql/sales_analysis.sql
 
 ---
 
-## ▶️ **How to Run**
+##  **How to Run**
 1. Ingest raw FMCG sales data into **Databricks**
 2. Execute **PySpark notebooks** to perform data cleaning and aggregations
 3. Configure and trigger the **Apache Airflow DAG** for pipeline orchestration
@@ -92,7 +91,7 @@ SQL queries used for exploratory analysis and data validation are available here
 
 ---
 
-## 💡 **What This Project Demonstrates**
+##  **What This Project Demonstrates**
 - Design and implementation of an **end-to-end data engineering pipeline**
 - Scalable data transformation using **Apache Spark**
 - Workflow orchestration and automation with **Apache Airflow**
@@ -102,7 +101,7 @@ SQL queries used for exploratory analysis and data validation are available here
 
 ---
 
-## 🚀 **Future Improvements**
+##  **Future Improvements**
 - Integrate cloud-based storage such as **AWS S3** or **Azure Data Lake**
 - Implement **incremental and partitioned data loads**
 - Add automated **data quality checks and monitoring**
