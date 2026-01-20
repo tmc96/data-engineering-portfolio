@@ -6,7 +6,7 @@ This project demonstrates an end-to-end data engineering and analytics pipeline 
 The aim was to ingest raw transactional sales data, perform scalable transformations, organize workflows and deliver actionable business insights through an interactive Power BI dashboard.
 
 
-Tech Stack
+a)Tech Stack
 
 SQL – exploratory analysis and aggregations
 
@@ -21,7 +21,7 @@ Python – supporting scripts and analysis
 
 
 
-Dataset
+b)Dataset
 Source: Kaggle – Grocery Store Sales Dataset
 Records: ~1900 transactions
 Key fields:
