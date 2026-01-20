@@ -1,147 +1,113 @@
-📊 FMCG Sales Data Engineering & Analytics Pipeline
+# 📊 FMCG Sales Data Engineering & Analytics Pipeline
 
-Project Overview
+## 📌 Project Overview
+This project showcases the design and implementation of an **end-to-end data engineering and analytics pipeline** using an FMCG retail sales dataset.
 
-This project demonstrates an end-to-end data engineering and analytics pipeline using an FMCG retail dataset.
-The aim was to ingest raw transactional sales data, perform scalable transformations, organize workflows and deliver actionable business insights through an interactive Power BI dashboard.
+The objective is to transform **raw transactional data** into **business-ready analytics**, enabling stakeholders to track sales performance, identify top products and stores, and analyze trends through an interactive **Power BI dashboard**.
 
+This project reflects real-world data engineering practices, including scalable data processing, workflow orchestration, and analytics delivery.
 
-a)Tech Stack
+---
 
-SQL – exploratory analysis and aggregations
+## 🛠 Tech Stack
+- **SQL** – Data exploration, validation, and aggregations  
+- **PySpark (Databricks)** – Scalable data cleaning and transformation  
+- **Apache Airflow** – Pipeline orchestration and scheduling  
+- **Power BI** – Business intelligence, KPIs, and dashboards  
+- **Python** – Supporting scripts and data analysis  
 
-PySpark (Databricks) – data cleaning and transformation
+---
 
-Apache Airflow – pipeline organization
+## 📂 Dataset
+**Source:** Kaggle – Grocery Store Sales Dataset  
+**Volume:** ~1,900 transactional records  
 
-Power BI – data visualization and KPI reporting
+### Key Attributes
+- Transaction Date  
+- Store Name  
+- Aisle  
+- Product Name  
+- Quantity Sold  
+- Final Sales Amount  
 
-Python – supporting scripts and analysis
+---
 
+## 🏗 Data Pipeline Architecture
 
+### 1️⃣ Data Ingestion
+- Raw CSV sales data ingested into **Databricks**
+- Dataset prepared for distributed processing
 
+### 2️⃣ Data Transformation (PySpark)
+- Data cleaning and quality improvement
+- Handling missing and inconsistent values
+- Aggregation of sales metrics by:
+  - Product
+  - Aisle
+  - Store
+  - Date
 
-b)Dataset
-Source: Kaggle – Grocery Store Sales Dataset
-Records: ~1900 transactions
-Key fields:
+### 3️⃣ Workflow Orchestration (Apache Airflow)
+- End-to-end pipeline organized using an **Airflow DAG**
+- Daily scheduled execution
+- Automated transformation and load steps
 
-Transaction date
+### 4️⃣ Analytics & Visualization
+- Curated, aggregated tables exposed to **Power BI**
+- KPI-driven dashboards built for business analysis
 
-Store Name
+---
 
-Aisle
+## 📊 Power BI Dashboard
 
-Product Name
+### Business Insights Delivered
+- Top 10 products by total sales
+- Best-performing stores and aisles
+- Daily and weekly sales trends
+- Interactive filtering by date for deeper analysis
 
-Quantity
+---
 
-Final sales amount
+## 📈 Key KPIs
+- Total Sales  
+- Average Daily Sales  
+- Weekly Sales Trend  
+- Top Product Contribution  
 
+---
 
+## 🧪 Sample SQL Analysis
+SQL queries used for exploratory analysis and data validation are available here:
 
-
-Data Pipeline Architecture
-
-Data Ingestion
-
-Raw CSV ingested into Databricks
-
-Data Transformation (PySpark)
-
-Handling missing values, improving quality of data
-
-Aggregating sales by product, aisle, store, and date
-
-Workflow organization (Airflow)
-
-DAG scheduled to run daily
-
-Automated transformation and load steps
-
-Analytics & Visualization
-
-Aggregated outputs consumed in Power BI
-
-KPIs and trends visualized for business insights
-
-
-
-
-Power BI Dashboard
-
-Key insights delivered:
-
-Top 10 products by total sales
-
-Top performing stores and aisles
-
-Weekly and daily sales trends
-
-Interactive filtering by date
-
-
-
-
-Key KPIs
-
-Total Sales
-
-Average Daily Sales
-
-Weekly Sales Trend
-
-Top Product Contribution
-
-
-
-
-Sample SQL Analysis
-
-SQL queries used for validation and exploratory analysis are available in:
-
+```text
 /sql/sales_analysis.sql
 
+---
 
+## ▶️ How to Run
+1. Ingest raw FMCG sales data into **Databricks**
+2. Execute **PySpark notebooks** to perform data cleaning and aggregations
+3. Configure and trigger the **Apache Airflow DAG** for pipeline orchestration
+4. Connect **Power BI** to the processed tables to analyze KPIs and trends
 
+---
 
-How to Run 
+## 💡 What This Project Demonstrates
+- Design and implementation of an **end-to-end data engineering pipeline**
+- Scalable data transformation using **Apache Spark**
+- Workflow orchestration and automation with **Apache Airflow**
+- Application of **analytics engineering principles**
+- Conversion of raw transactional data into **business-ready insights**
+- Delivery of KPI-driven dashboards for decision-making
 
-Load dataset into Databricks
+---
 
-Run PySpark notebook for transformations
-
-Configure and trigger Airflow DAG
-
-Connect Power BI to processed tables
-
-
-
-
-What This Project Demonstrates
-
-End-to-end data engineering workflow
-
-Scalable data processing using Spark
-
-Pipeline organizationn with Airflow
-
-Business-focused analytics and visualization
-
-Clean, production-style project structure
-
-
-
-
-Future Improvements
-
-Add cloud storage (S3 / ADLS)
-
-Implement incremental loads
-
-Add data quality checks
-
-Deploy dashboard to Power BI Service
+## 🚀 Future Improvements
+- Integrate cloud-based storage such as **AWS S3** or **Azure Data Lake**
+- Implement **incremental and partitioned data loads**
+- Add automated **data quality checks and monitoring**
+- Deploy dashboards to **Power BI Service** for broader stakeholder access
+- Introduce **CI/CD pipelines** for data and analytics workflows
 
 
 👤 Author
