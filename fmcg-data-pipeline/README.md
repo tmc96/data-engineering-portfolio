@@ -84,7 +84,7 @@ SQL queries used for exploratory analysis and data validation are available here
 
 ---
 
-##  **How to Run**
+## ▶️ **How to Run**
 1. Ingest raw FMCG sales data into **Databricks**
 2. Execute **PySpark notebooks** to perform data cleaning and aggregations
 3. Configure and trigger the **Apache Airflow DAG** for pipeline orchestration
@@ -92,7 +92,7 @@ SQL queries used for exploratory analysis and data validation are available here
 
 ---
 
-##  What This Project Demonstrates
+## 💡 **What This Project Demonstrates**
 - Design and implementation of an **end-to-end data engineering pipeline**
 - Scalable data transformation using **Apache Spark**
 - Workflow orchestration and automation with **Apache Airflow**
@@ -102,13 +102,12 @@ SQL queries used for exploratory analysis and data validation are available here
 
 ---
 
-##  Future Improvements
+## 🚀 **Future Improvements**
 - Integrate cloud-based storage such as **AWS S3** or **Azure Data Lake**
 - Implement **incremental and partitioned data loads**
 - Add automated **data quality checks and monitoring**
 - Deploy dashboards to **Power BI Service** for broader stakeholder access
 - Introduce **CI/CD pipelines** for data and analytics workflows
-
 
 👤 Author
 
