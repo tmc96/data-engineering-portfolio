@@ -86,9 +86,10 @@ py -m checks.data_quality_checks
 
 [ALERT] Missing Values Detected
 
-
 Details:
+
 {'TransactionID': 2512}
+
 Data quality checks completed.
 
 ## Real-World Relevance
