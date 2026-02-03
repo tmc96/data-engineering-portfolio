@@ -96,7 +96,7 @@ py -m checks.data_quality_checks
 
 ---
 
-## 📊 Example Output
+## Example Output
 
 [ALERT] Missing Values Detected
 
