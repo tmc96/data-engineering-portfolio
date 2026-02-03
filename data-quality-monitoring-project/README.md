@@ -25,19 +25,33 @@ The pipeline validates incoming datasets and detects potential data integrity is
 
 ## Project Structure
 data-quality-monitoring-project/
+
 │
+
 ├── checks/
+
 │    ├── __init__.py
+
 │    ├── data_quality_checks.py
+
 │
+
 ├── alerts/
+
 │    ├── __init__.py
+
 │    ├── alert_logic.py
+
 │
+
 ├── data/
-│    ├── sample_transactions.csv   (optional sample only)
+
+│    ├── bank_transactions_data_2.csv
+
 │
+
 ├── requirements.txt
+
 ├── README.md
 
 ## Data Quality Checks Implemented
