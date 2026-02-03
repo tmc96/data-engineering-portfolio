@@ -67,7 +67,7 @@ Triggers alerts when validation rules fail.
 
 Clone repository:
 
-git clone <your repo link>
+git clone <https://github.com/tmc96/data-engineering-portfolio.git>
 
 
 Install dependencies:
