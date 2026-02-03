@@ -82,12 +82,11 @@ py -m checks.data_quality_checks
 
 ---
 
-## Example Output
-============================================================
+## 📊 Example Output
+
 [ALERT] Missing Values Detected
 Details:
 {'TransactionID': 2512}
-============================================================
 Data quality checks completed.
 
 ## Real-World Relevance
