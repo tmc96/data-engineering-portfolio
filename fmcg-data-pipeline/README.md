@@ -1,4 +1,4 @@
-# 📊 FMCG Sales Data Engineering & Analytics Pipeline
+# FMCG Sales Data Engineering & Analytics Pipeline
 
 ##  Project Overview
 This project showcases the design and implementation of an **end-to-end data engineering and analytics pipeline** using an FMCG retail sales dataset.
