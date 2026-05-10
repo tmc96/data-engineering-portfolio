@@ -1,0 +1,145 @@
+{
+  "Comment": "Olist E-Commerce Data Pipeline Orchestration",
+  "StartAt": "Start Bronze Crawler",
+  "States": {
+
+    "Start Bronze Crawler": {
+      "Type": "Task",
+      "Comment": "Triggers the Glue Crawler to scan Bronze S3 layer and update Data Catalog",
+      "Resource": "arn:aws:states:::aws-sdk:glue:startCrawler",
+      "Parameters": {
+        "Name": "olist-bronze-crawler"
+      },
+      "Next": "Wait For Bronze Crawler",
+      "Catch": [
+        {
+          "ErrorEquals": ["Glue.CrawlerRunningException"],
+          "Next": "Wait For Bronze Crawler",
+          "Comment": "If crawler is already running just wait for it"
+        }
+      ]
+    },
+
+    "Wait For Bronze Crawler": {
+      "Type": "Wait",
+      "Comment": "Wait 60 seconds before checking crawler status",
+      "Seconds": 60,
+      "Next": "Check Bronze Crawler Status"
+    },
+
+    "Check Bronze Crawler Status": {
+      "Type": "Task",
+      "Comment": "Poll the crawler to see if it has finished",
+      "Resource": "arn:aws:states:::aws-sdk:glue:getCrawler",
+      "Parameters": {
+        "Name": "olist-bronze-crawler"
+      },
+      "Next": "Is Bronze Crawler Done?"
+    },
+
+    "Is Bronze Crawler Done?": {
+      "Type": "Choice",
+      "Comment": "Branch based on crawler state — loop back if still running",
+      "Choices": [
+        {
+          "Variable": "$.Crawler.State",
+          "StringEquals": "READY",
+          "Next": "Run Silver ETL Job"
+        }
+      ],
+      "Default": "Wait For Bronze Crawler"
+    },
+
+    "Run Silver ETL Job": {
+      "Type": "Task",
+      "Comment": "Runs the Bronze to Silver Glue ETL job — cleans all 7 tables",
+      "Resource": "arn:aws:states:::glue:startJobRun.sync",
+      "Parameters": {
+        "JobName": "olist-bronze-to-silver-all-tables"
+      },
+      "Next": "Run Gold ETL Job",
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "Next": "Pipeline Failed",
+          "Comment": "Catch any error and go to failure state"
+        }
+      ]
+    },
+
+    "Run Gold ETL Job": {
+      "Type": "Task",
+      "Comment": "Runs the Silver to Gold Glue ETL job — builds star schema",
+      "Resource": "arn:aws:states:::glue:startJobRun.sync",
+      "Parameters": {
+        "JobName": "olist-silver-to-gold"
+      },
+      "Next": "Start Gold Crawler",
+      "Catch": [
+        {
+          "ErrorEquals": ["States.ALL"],
+          "Next": "Pipeline Failed",
+          "Comment": "Catch any error and go to failure state"
+        }
+      ]
+    },
+
+    "Start Gold Crawler": {
+      "Type": "Task",
+      "Comment": "Triggers Gold crawler to update Data Catalog with new Gold tables",
+      "Resource": "arn:aws:states:::aws-sdk:glue:startCrawler",
+      "Parameters": {
+        "Name": "olist-gold-crawler"
+      },
+      "Next": "Wait For Gold Crawler",
+      "Catch": [
+        {
+          "ErrorEquals": ["Glue.CrawlerRunningException"],
+          "Next": "Wait For Gold Crawler"
+        }
+      ]
+    },
+
+    "Wait For Gold Crawler": {
+      "Type": "Wait",
+      "Comment": "Wait 60 seconds before checking Gold crawler status",
+      "Seconds": 60,
+      "Next": "Check Gold Crawler Status"
+    },
+
+    "Check Gold Crawler Status": {
+      "Type": "Task",
+      "Comment": "Poll the Gold crawler to see if it has finished",
+      "Resource": "arn:aws:states:::aws-sdk:glue:getCrawler",
+      "Parameters": {
+        "Name": "olist-gold-crawler"
+      },
+      "Next": "Is Gold Crawler Done?"
+    },
+
+    "Is Gold Crawler Done?": {
+      "Type": "Choice",
+      "Comment": "Branch based on crawler state — loop back if still running",
+      "Choices": [
+        {
+          "Variable": "$.Crawler.State",
+          "StringEquals": "READY",
+          "Next": "Pipeline Succeeded"
+        }
+      ],
+      "Default": "Wait For Gold Crawler"
+    },
+
+    "Pipeline Succeeded": {
+      "Type": "Succeed",
+      "Comment": "All steps completed successfully"
+    },
+
+    "Pipeline Failed": {
+      "Type": "Fail",
+      "Comment": "Pipeline failed — check CloudWatch logs for details",
+      "Error": "PipelineError",
+      "Cause": "One or more Glue jobs failed"
+    }
+  }
+}
