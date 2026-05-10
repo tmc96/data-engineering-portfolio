@@ -3,8 +3,6 @@
 
 > An end-to-end batch data pipeline that processes Brazilian e-commerce transactions from raw source data into a structured analytical data lake, enabling business insights on sales performance, customer behaviour, seller metrics, and delivery efficiency — built entirely on AWS.
 
----<img width="1510" height="630" alt="query1" src="https://github.com/user-attachments/assets/9d4ce413-15b0-4a85-b3f2-ffc94c6f822b" />
-
 
 ## 🏗️ Architecture
 
