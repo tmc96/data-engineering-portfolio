@@ -6,7 +6,8 @@
 
 ## 🏗️ Architecture
 
-![Architecture Diagram](docs/architecture.png)
+<img width="743" height="696" alt="architecture" src="https://github.com/user-attachments/assets/0b49700b-fc94-4f7a-91ac-22b77eb1fb02" />
+
 
 > **Bronze → Silver → Gold lakehouse architecture** orchestrated by AWS Step Functions
 
