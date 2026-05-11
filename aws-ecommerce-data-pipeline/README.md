@@ -1,7 +1,7 @@
 [README.md](https://github.com/user-attachments/files/27573078/README.md)
 # 🛒 Olist E-Commerce AWS Data Pipeline
 
-> An end-to-end batch data pipeline that processes Brazilian e-commerce transactions from raw source data into a structured analytical data lake, enabling business insights on sales performance, customer behaviour, seller metrics, and delivery efficiency — built entirely on AWS.
+> An end-to-end batch data pipeline that processes Brazilian e-commerce transactions from raw source data into a structured analytical data lake, resulting in business insights on sales performance, customer behaviour, seller metrics, and delivery efficiency — built entirely on AWS.
 
 
 ## 🏗️ Architecture
